@@ -1,6 +1,9 @@
 const resultado = document.querySelector(".contenedor-respuesta");
 const contenedorRespuesta = document.querySelector('#contenedor-respuesta');
 let contenedorRespuestaEncriptada = document.querySelector('.contenedor-texto-encriptado');
+const copiar = document.querySelector('.btm-copy');
+const espacioTextoEncriptado = document.querySelector('.texto-encriptado');
+
 
 contenedorRespuestaEncriptada.style.display = 'none';
 
@@ -22,7 +25,7 @@ function encriptar() {
     textoEncriptado = textoEncriptado.replace(/i/g, "imes");
     textoEncriptado = textoEncriptado.replace(/a/g, "ai");
     textoEncriptado = textoEncriptado.replace(/o/g, "ober");
-    textoEncriptado = textoEncriptado.replace(/u/g, "ubat");
+    textoEncriptado = textoEncriptado.replace(/u/g, "ufat");
 
     mostrarMensaje();
 }
@@ -44,7 +47,7 @@ function desencriptar() {
     textoEncriptado = textoEncriptado.replace(/imes/g, "i");
     textoEncriptado = textoEncriptado.replace(/ai/g, "a");
     textoEncriptado = textoEncriptado.replace(/ober/g, "o");
-    textoEncriptado = textoEncriptado.replace(/u/g, "u");
+    textoEncriptado = textoEncriptado.replace(/ufat/g, "u");
 
     mostrarMensaje();
 }
@@ -68,3 +71,9 @@ function mostrarMensaje () {
         contenedorRespuesta.classList.add('contenedor-respuesta');
     }   
 }
+
+//Funcion copiar texto encriptado o desencriptado
+copiar.addEventListener('click', e => {
+    espacioTextoEncriptado.select();
+    document.execCommand('copy');
+})
