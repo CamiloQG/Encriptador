@@ -4,7 +4,7 @@
 
 body {
     background: #F3F5FC;
-    height: 100vh;
+    height: 93.5vh;
 }
 
 header {
@@ -237,7 +237,37 @@ main{
     cursor: pointer;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 60px;
+    background-color: #0A3871;
 
+}
+
+.social-icons a{
+    text-decoration: none;
+    margin: 10px;
+}
+
+.social-icons i {
+    font-size: 32px; /* Tamaño normal */
+    color: white;
+    transition: transform 0.3s; /* Transición suave para el cambio de tamaño */
+}
+
+.social-icons i:hover {
+    transform: scale(1.1); /* Aumentar el tamaño en 1.1 veces al hacer hover */
+}
+
+.derechos-autor {
+    font-size: 18px;
+    font-family: inter;
+    font-style: inherit;
+    color: white;
+}
 
 @media (max-width: 600px) {
 
